@@ -240,11 +240,10 @@ sizeof(sd001),USB_DESCRIPTOR_STRING,
 }};
 
 //Product string descriptor
-const struct{uint8_t bLength;uint8_t bDscType;uint16_t string[35];}sd002={
+const struct{uint8_t bLength;uint8_t bDscType;uint16_t string[28];}sd002={
 sizeof(sd002),USB_DESCRIPTOR_STRING,
-{'S','i','m','p','l','e',' ','H','I','D',
- ' ','D','e','v','i','c','e',' ','D','e',
- 'm','o',' ','(','-','>',
+{'F','r','a','n','c','o',' ','H','I','D',
+ ' ','D','e','m','o',' ','(','-','>',
 #if defined(__18F14K50)       
     '1','8','F','1','4','K','5','0',')'
 #elif defined (__18F4550)
