@@ -45,7 +45,7 @@
       </logicalFolder>
       <logicalFolder name="f3" displayName="bsp" projectFiles="true">
         <itemPath>../BSP-FILES/pdusb_27J53.c</itemPath>
-        <itemPath>../BSP-FILES/pdfusb_4550.c</itemPath>
+        <itemPath>../BSP-FILES/pdusb_4550.c</itemPath>
         <itemPath>../BSP-FILES/lpcudk_14K50.c</itemPath>
         <itemPath>../BSP-FILES/pdusb_25K50.c</itemPath>
       </logicalFolder>
@@ -102,16 +102,6 @@
         <makeCustomizationEnableLongLines>false</makeCustomizationEnableLongLines>
         <makeCustomizationNormalizeHexFile>false</makeCustomizationNormalizeHexFile>
       </makeCustomizationType>
-      <item path="../BSP-FILES/pdfusb_4550.c" ex="true" overriding="false">
-        <C18>
-        </C18>
-        <C18-AS>
-        </C18-AS>
-        <C18-LD>
-        </C18-LD>
-        <C18LanguageToolchain>
-        </C18LanguageToolchain>
-      </item>
       <item path="../BSP-FILES/pdusb_25K50.c" ex="true" overriding="false">
         <C18>
         </C18>
@@ -143,6 +133,16 @@
         </C18LanguageToolchain>
       </item>
       <item path="../BSP-FILES/pdusb_27J53.h" ex="true" overriding="false">
+        <C18>
+        </C18>
+        <C18-AS>
+        </C18-AS>
+        <C18-LD>
+        </C18-LD>
+        <C18LanguageToolchain>
+        </C18LanguageToolchain>
+      </item>
+      <item path="../BSP-FILES/pdusb_4550.c" ex="true" overriding="false">
         <C18>
         </C18>
         <C18-AS>
@@ -262,7 +262,7 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>PICkit3PlatformTool</platformTool>
         <languageToolchain>XC8</languageToolchain>
-        <languageToolchainVersion>1.31</languageToolchainVersion>
+        <languageToolchainVersion>1.34</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <compileType>
@@ -287,14 +287,6 @@
         <makeCustomizationEnableLongLines>false</makeCustomizationEnableLongLines>
         <makeCustomizationNormalizeHexFile>false</makeCustomizationNormalizeHexFile>
       </makeCustomizationType>
-      <item path="../BSP-FILES/pdfusb_4550.c" ex="true" overriding="false">
-        <HI-TECH-COMP>
-        </HI-TECH-COMP>
-        <HI-TECH-LINK>
-        </HI-TECH-LINK>
-        <XC8-config-global>
-        </XC8-config-global>
-      </item>
       <item path="../BSP-FILES/pdusb_25K50.c" ex="true" overriding="false">
         <HI-TECH-COMP>
         </HI-TECH-COMP>
@@ -320,6 +312,14 @@
         </XC8-config-global>
       </item>
       <item path="../BSP-FILES/pdusb_27J53.h" ex="true" overriding="false">
+        <HI-TECH-COMP>
+        </HI-TECH-COMP>
+        <HI-TECH-LINK>
+        </HI-TECH-LINK>
+        <XC8-config-global>
+        </XC8-config-global>
+      </item>
+      <item path="../BSP-FILES/pdusb_4550.c" ex="true" overriding="false">
         <HI-TECH-COMP>
         </HI-TECH-COMP>
         <HI-TECH-LINK>
@@ -483,16 +483,6 @@
         <makeCustomizationEnableLongLines>false</makeCustomizationEnableLongLines>
         <makeCustomizationNormalizeHexFile>false</makeCustomizationNormalizeHexFile>
       </makeCustomizationType>
-      <item path="../BSP-FILES/pdfusb_4550.c" ex="true" overriding="false">
-        <C18>
-        </C18>
-        <C18-AS>
-        </C18-AS>
-        <C18-LD>
-        </C18-LD>
-        <C18LanguageToolchain>
-        </C18LanguageToolchain>
-      </item>
       <item path="../BSP-FILES/pdusb_25K50.c" ex="true" overriding="false">
         <C18>
         </C18>
@@ -524,6 +514,16 @@
         </C18LanguageToolchain>
       </item>
       <item path="../BSP-FILES/pdusb_27J53.h" ex="true" overriding="false">
+        <C18>
+        </C18>
+        <C18-AS>
+        </C18-AS>
+        <C18-LD>
+        </C18-LD>
+        <C18LanguageToolchain>
+        </C18LanguageToolchain>
+      </item>
+      <item path="../BSP-FILES/pdusb_4550.c" ex="true" overriding="false">
         <C18>
         </C18>
         <C18-AS>
@@ -627,7 +627,7 @@
         <property key="voltagevalue" value="3.25"/>
       </PICkit3PlatformTool>
     </conf>
-    <conf name="PDFSUSB_4550_C18" type="2">
+    <conf name="pdusb_4550_C18" type="2">
       <toolsSet>
         <developmentServer>localhost</developmentServer>
         <targetDevice>PIC18F4550</targetDevice>
@@ -804,7 +804,7 @@
         <property key="voltagevalue" value="3.25"/>
       </PICkit3PlatformTool>
     </conf>
-    <conf name="PDFSUSB_4550_XC8" type="2">
+    <conf name="pdusb_4550_XC8" type="2">
       <toolsSet>
         <developmentServer>localhost</developmentServer>
         <targetDevice>PIC18F4550</targetDevice>
@@ -812,7 +812,7 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>PICkit3PlatformTool</platformTool>
         <languageToolchain>XC8</languageToolchain>
-        <languageToolchainVersion></languageToolchainVersion>
+        <languageToolchainVersion>1.34</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <compileType>
@@ -1053,16 +1053,6 @@
         <C18LanguageToolchain>
         </C18LanguageToolchain>
       </item>
-      <item path="../BSP-FILES/pdfusb_4550.c" ex="true" overriding="false">
-        <C18>
-        </C18>
-        <C18-AS>
-        </C18-AS>
-        <C18-LD>
-        </C18-LD>
-        <C18LanguageToolchain>
-        </C18LanguageToolchain>
-      </item>
       <item path="../BSP-FILES/pdusb_25K50.c" ex="true" overriding="false">
         <C18>
         </C18>
@@ -1074,6 +1064,16 @@
         </C18LanguageToolchain>
       </item>
       <item path="../BSP-FILES/pdusb_25K50.h" ex="true" overriding="false">
+        <C18>
+        </C18>
+        <C18-AS>
+        </C18-AS>
+        <C18-LD>
+        </C18-LD>
+        <C18LanguageToolchain>
+        </C18LanguageToolchain>
+      </item>
+      <item path="../BSP-FILES/pdusb_4550.c" ex="true" overriding="false">
         <C18>
         </C18>
         <C18-AS>
@@ -1185,7 +1185,7 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>PICkit3PlatformTool</platformTool>
         <languageToolchain>XC8</languageToolchain>
-        <languageToolchainVersion>1.31</languageToolchainVersion>
+        <languageToolchainVersion>1.34</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <compileType>
@@ -1226,14 +1226,6 @@
         <XC8-config-global>
         </XC8-config-global>
       </item>
-      <item path="../BSP-FILES/pdfusb_4550.c" ex="true" overriding="false">
-        <HI-TECH-COMP>
-        </HI-TECH-COMP>
-        <HI-TECH-LINK>
-        </HI-TECH-LINK>
-        <XC8-config-global>
-        </XC8-config-global>
-      </item>
       <item path="../BSP-FILES/pdusb_25K50.c" ex="true" overriding="false">
         <HI-TECH-COMP>
         </HI-TECH-COMP>
@@ -1243,6 +1235,14 @@
         </XC8-config-global>
       </item>
       <item path="../BSP-FILES/pdusb_25K50.h" ex="true" overriding="false">
+        <HI-TECH-COMP>
+        </HI-TECH-COMP>
+        <HI-TECH-LINK>
+        </HI-TECH-LINK>
+        <XC8-config-global>
+        </XC8-config-global>
+      </item>
+      <item path="../BSP-FILES/pdusb_4550.c" ex="true" overriding="false">
         <HI-TECH-COMP>
         </HI-TECH-COMP>
         <HI-TECH-LINK>
@@ -1426,16 +1426,6 @@
         <C18LanguageToolchain>
         </C18LanguageToolchain>
       </item>
-      <item path="../BSP-FILES/pdfusb_4550.c" ex="true" overriding="false">
-        <C18>
-        </C18>
-        <C18-AS>
-        </C18-AS>
-        <C18-LD>
-        </C18-LD>
-        <C18LanguageToolchain>
-        </C18LanguageToolchain>
-      </item>
       <item path="../BSP-FILES/pdusb_27J53.c" ex="true" overriding="false">
         <C18>
         </C18>
@@ -1447,6 +1437,16 @@
         </C18LanguageToolchain>
       </item>
       <item path="../BSP-FILES/pdusb_27J53.h" ex="true" overriding="false">
+        <C18>
+        </C18>
+        <C18-AS>
+        </C18-AS>
+        <C18-LD>
+        </C18-LD>
+        <C18LanguageToolchain>
+        </C18LanguageToolchain>
+      </item>
+      <item path="../BSP-FILES/pdusb_4550.c" ex="true" overriding="false">
         <C18>
         </C18>
         <C18-AS>
@@ -1558,7 +1558,7 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>PICkit3PlatformTool</platformTool>
         <languageToolchain>XC8</languageToolchain>
-        <languageToolchainVersion>1.31</languageToolchainVersion>
+        <languageToolchainVersion>1.34</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <compileType>
@@ -1599,14 +1599,6 @@
         <XC8-config-global>
         </XC8-config-global>
       </item>
-      <item path="../BSP-FILES/pdfusb_4550.c" ex="true" overriding="false">
-        <HI-TECH-COMP>
-        </HI-TECH-COMP>
-        <HI-TECH-LINK>
-        </HI-TECH-LINK>
-        <XC8-config-global>
-        </XC8-config-global>
-      </item>
       <item path="../BSP-FILES/pdusb_27J53.c" ex="true" overriding="false">
         <HI-TECH-COMP>
         </HI-TECH-COMP>
@@ -1616,6 +1608,14 @@
         </XC8-config-global>
       </item>
       <item path="../BSP-FILES/pdusb_27J53.h" ex="true" overriding="false">
+        <HI-TECH-COMP>
+        </HI-TECH-COMP>
+        <HI-TECH-LINK>
+        </HI-TECH-LINK>
+        <XC8-config-global>
+        </XC8-config-global>
+      </item>
+      <item path="../BSP-FILES/pdusb_4550.c" ex="true" overriding="false">
         <HI-TECH-COMP>
         </HI-TECH-COMP>
         <HI-TECH-LINK>

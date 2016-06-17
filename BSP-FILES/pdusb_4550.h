@@ -1,12 +1,12 @@
 /* 
- * File:   pdfusb_4550.h
+ * File:   pdusb_4550.h
  * Author: vsk hs-ulm
  *
  * Created on 9. Mai 2014, 10:39
  */
 
-#ifndef PDFUSB_4550_H
-#define	PDFUSB_4550_H
+#ifndef PDUSB_4550_H
+#define	PDUSB_4550_H
 
 //#define OLD_USB_DEMO_BOARD    //for use with the 1. USB DEMO BOARD DM163010
 
@@ -82,4 +82,4 @@ void initADC(void);
 void initSpecialEventTrigger(void);
 #define initCLKPLL()    // not used for 4550
 
-#endif	/* PDFUSB_4550_H */
+#endif	/* PDUSB_4550_H */
