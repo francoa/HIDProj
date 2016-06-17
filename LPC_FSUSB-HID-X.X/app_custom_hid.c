@@ -22,8 +22,6 @@
  *		-	...
  *
  ******************************************************************************/
-
-
 #include <usb/usb.h>
 #include <usb/usb_device_hid.h>
 #include "system.h"
@@ -35,10 +33,6 @@ struct {
     unsigned OUT_TODO :1;
     unsigned free :6;
 }Flags;
-
-#ifndef _XTAL_FREQ
-    #define _XTAL_FREQ 20000000
-#endif
 
 /* Some processors have a limited range of RAM addresses where the USB module
  * is able to access.  The following section is for those devices.  This section
@@ -86,7 +80,7 @@ void APP_cmd(void);
   
 /** VARIABLES ******************************************************/
 BYTE INPacket[2];
-
+ unsigned char Txdata[] = "HOLA";
 
 /*********************************************************************
 * Function:     void APP_CustomHIDInitialize(void);
@@ -133,8 +127,15 @@ void APP_CustomHIDInitialize()
 ********************************************************************/
 void APP_CustomHIDTasks()
 {
-    mLED_1_Toggle();
+#ifdef DBG
+    while(!TRMT);
+    TXREG = 'H';
+    //WriteUSART('H');
+    //putsUSART((char *)Txdata);
+#endif
+    mLED_1_On();
     __delay_ms(5);
+    mLED_1_Off();
     
     if(!HIDRxHandleBusy(USBOutHandle))
         APP_usbOUT(); // Data USB(pc) -> PIC
@@ -161,6 +162,16 @@ void APP_CustomHIDTasks()
  ******************************************************************************/
 void APP_usbIN(void) {
 
+    mLED_2_Toggle();
+    __delay_ms(5);
+    
+    //Write the new data that we wish to send to the host to the INPacket[] array
+    INPacket[0] = 0b11110000;
+    INPacket[1] = 0b00110011;
+
+    //Send the data contained in the INPacket[] array through endpoint "EP_NUM"
+    USBInHandle = USBTransferOnePacket(HID_EP,IN_TO_HOST,(uint8_t*)&INPacket[0],sizeof(INPacket));
+
     USBInHandle = HIDTxPacket(HID_EP,(uint8_t *)ToSendDataBuffer, 64);
     return;
 //USB_HANDLE USBTransferOnePacket(uint8_t ep,uint8_t dir,uint8_t* data,uint8_t len)
@@ -182,6 +193,9 @@ void APP_usbIN(void) {
 
 void APP_usbOUT(void) {
 
+    mLED_3_Toggle();
+    __delay_ms(5);
+    
     APP_cmd();
 
     //Re-arm the OUT endpoint for the next packet

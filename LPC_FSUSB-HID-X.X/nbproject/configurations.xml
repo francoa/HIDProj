@@ -9,6 +9,7 @@
         <itemPath>system_config.h</itemPath>
         <itemPath>usb_config.h</itemPath>
         <itemPath>app_custom_hid.h</itemPath>
+        <itemPath>C:/Users/Franco/Documents/MPLABXProjects/HIDProj/LPC_FSUSB-HID-X.X/dbgFunctions.h</itemPath>
       </logicalFolder>
       <logicalFolder name="f4" displayName="bsp" projectFiles="true">
         <itemPath>../BSP-FILES/lpcudk_14K50.h</itemPath>
@@ -42,6 +43,7 @@
         <itemPath>main_hid.c</itemPath>
         <itemPath>system.c</itemPath>
         <itemPath>app_custom_hid.c</itemPath>
+        <itemPath>C:/Users/Franco/Documents/MPLABXProjects/HIDProj/LPC_FSUSB-HID-X.X/dbgFunctions.c</itemPath>
       </logicalFolder>
       <logicalFolder name="f3" displayName="bsp" projectFiles="true">
         <itemPath>../BSP-FILES/pdusb_27J53.c</itemPath>
@@ -66,6 +68,7 @@
   <sourceRootList>
     <Elem>C:\Users\Franco\Documents\MPLABXProjects\HIDProj\BSP-FILES</Elem>
     <Elem>C:\Users\Franco\Documents\MPLABXProjects\HIDProj\mla\v2014_07_22\framework\usb</Elem>
+    <Elem>C:\Users\Franco\Documents\MPLABXProjects\HIDProj\LPC_FSUSB-HID-X.X</Elem>
   </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>

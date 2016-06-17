@@ -56,6 +56,10 @@ MAIN_RETURN main(void)
       USBDeviceAttach();        //usb_device.c
     #endif
 
+    #ifdef DBG
+      USARTstart(9600);
+    #endif
+
     while(1)
     {
         SYSTEM_Tasks();

@@ -38,6 +38,19 @@
     #warning "compiler ???"
 #endif
 
+/*******************/
+
+#ifndef _XTAL_FREQ
+    #define _XTAL_FREQ 20000000
+#endif
+
+#define DBG
+#ifdef DBG
+    #include "dbgFunctions.h"
+#endif
+
+/******************/
+
 //#include <stdbool.h>  --VSK wth is ist needed for ?
 //#include <buttons.h>  --VSK (moved all this stuff to lpcudk_14K50_hid.h)
 //#include <leds.h>
