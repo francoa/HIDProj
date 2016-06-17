@@ -48,7 +48,7 @@
 #if defined(__18F14K50)
     #include "../BSP-FILES/lpcudk_14K50.h"
 #elif defined(__18F4550)
-    #include "../BSP-FILES/pdfusb_4550.h"
+    #include "../BSP-FILES/pdusb_4550.h"
 #elif defined(__18F27J53)
     #include "../BSP-FILES/pdusb_27j53.h"
 #elif defined(__18F25K50)

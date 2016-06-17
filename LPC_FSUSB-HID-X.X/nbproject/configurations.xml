@@ -1,20 +1,23 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><configurationDescriptor version="62">
-  <logicalFolder displayName="root" name="root" projectFiles="true">
-    <logicalFolder displayName="Header Files" name="HeaderFiles" projectFiles="true">
-      <logicalFolder displayName="app" name="f3" projectFiles="true">
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="62">
+  <logicalFolder name="root" displayName="root" projectFiles="true">
+    <logicalFolder name="HeaderFiles"
+                   displayName="Header Files"
+                   projectFiles="true">
+      <logicalFolder name="f3" displayName="app" projectFiles="true">
         <itemPath>system.h</itemPath>
         <itemPath>system_config.h</itemPath>
         <itemPath>usb_config.h</itemPath>
         <itemPath>app_custom_hid.h</itemPath>
       </logicalFolder>
-      <logicalFolder displayName="bsp" name="f4" projectFiles="true">
+      <logicalFolder name="f4" displayName="bsp" projectFiles="true">
         <itemPath>../BSP-FILES/lpcudk_14K50.h</itemPath>
         <itemPath>../BSP-FILES/pdusb_25K50.h</itemPath>
         <itemPath>../BSP-FILES/pdusb_4550.h</itemPath>
         <itemPath>../BSP-FILES/pdusb_27J53.h</itemPath>
       </logicalFolder>
-      <logicalFolder displayName="framework" name="f5" projectFiles="true">
-        <logicalFolder displayName="usb" name="f1" projectFiles="true">
+      <logicalFolder name="f5" displayName="framework" projectFiles="true">
+        <logicalFolder name="f1" displayName="usb" projectFiles="true">
           <itemPath>../mla/v2014_07_22/framework/usb/usb.h</itemPath>
           <itemPath>../mla/v2014_07_22/framework/usb/usb_ch9.h</itemPath>
           <itemPath>../mla/v2014_07_22/framework/usb/usb_common.h</itemPath>
@@ -27,38 +30,42 @@
       <itemPath>stdbool.h</itemPath>
       <itemPath>stdint.h</itemPath>
     </logicalFolder>
-    <logicalFolder displayName="Linker Files" name="LinkerScript" projectFiles="true">
+    <logicalFolder name="LinkerScript"
+                   displayName="Linker Files"
+                   projectFiles="true">
     </logicalFolder>
-    <logicalFolder displayName="Source Files" name="SourceFiles" projectFiles="true">
-      <logicalFolder displayName="app" name="f2" projectFiles="true">
+    <logicalFolder name="SourceFiles"
+                   displayName="Source Files"
+                   projectFiles="true">
+      <logicalFolder name="f2" displayName="app" projectFiles="true">
         <itemPath>usb_descriptors.c</itemPath>
         <itemPath>main_hid.c</itemPath>
         <itemPath>system.c</itemPath>
         <itemPath>app_custom_hid.c</itemPath>
       </logicalFolder>
-      <logicalFolder displayName="bsp" name="f3" projectFiles="true">
+      <logicalFolder name="f3" displayName="bsp" projectFiles="true">
         <itemPath>../BSP-FILES/pdusb_27J53.c</itemPath>
         <itemPath>../BSP-FILES/pdfusb_4550.c</itemPath>
         <itemPath>../BSP-FILES/lpcudk_14K50.c</itemPath>
         <itemPath>../BSP-FILES/pdusb_25K50.c</itemPath>
       </logicalFolder>
-      <logicalFolder displayName="framework" name="f1" projectFiles="true">
-        <logicalFolder displayName="usb" name="f1" projectFiles="true">
+      <logicalFolder name="f1" displayName="framework" projectFiles="true">
+        <logicalFolder name="f1" displayName="usb" projectFiles="true">
           <itemPath>../mla/v2014_07_22/framework/usb/src/usb_device.c</itemPath>
           <itemPath>../mla/v2014_07_22/framework/usb/src/usb_device_hid.c</itemPath>
         </logicalFolder>
       </logicalFolder>
     </logicalFolder>
-    <logicalFolder displayName="Important Files" name="ExternalFiles" projectFiles="false">
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false">
       <itemPath>Makefile</itemPath>
     </logicalFolder>
     <itemPath>C18_changes_in_framework.txt</itemPath>
   </logicalFolder>
   <sourceRootList>
-    <Elem>../../MLA_130615/Microchip/USB</Elem>
-    <Elem>../../MLA_130615/Microchip/Include</Elem>
-    <Elem>../mla/v2014_07_22/framework/usb</Elem>
-    <Elem>../BSP-FILES</Elem>
+    <Elem>C:\Users\Franco\Documents\MPLABXProjects\HIDProj\BSP-FILES</Elem>
+    <Elem>C:\Users\Franco\Documents\MPLABXProjects\HIDProj\mla\v2014_07_22\framework\usb</Elem>
   </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
@@ -66,11 +73,11 @@
       <toolsSet>
         <developmentServer>localhost</developmentServer>
         <targetDevice>PIC18F14K50</targetDevice>
-        <targetHeader/>
-        <targetPluginBoard/>
+        <targetHeader></targetHeader>
+        <targetPluginBoard></targetPluginBoard>
         <platformTool>PICkit3PlatformTool</platformTool>
         <languageToolchain>C18</languageToolchain>
-        <languageToolchainVersion>3.40</languageToolchainVersion>
+        <languageToolchainVersion></languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <compileType>
@@ -83,19 +90,19 @@
         <loading>
           <useAlternateLoadableFile>false</useAlternateLoadableFile>
           <parseOnProdLoad>false</parseOnProdLoad>
-          <alternateLoadableFile/>
+          <alternateLoadableFile></alternateLoadableFile>
         </loading>
       </compileType>
       <makeCustomizationType>
         <makeCustomizationPreStepEnabled>false</makeCustomizationPreStepEnabled>
-        <makeCustomizationPreStep/>
+        <makeCustomizationPreStep></makeCustomizationPreStep>
         <makeCustomizationPostStepEnabled>false</makeCustomizationPostStepEnabled>
-        <makeCustomizationPostStep/>
+        <makeCustomizationPostStep></makeCustomizationPostStep>
         <makeCustomizationPutChecksumInUserID>false</makeCustomizationPutChecksumInUserID>
         <makeCustomizationEnableLongLines>false</makeCustomizationEnableLongLines>
         <makeCustomizationNormalizeHexFile>false</makeCustomizationNormalizeHexFile>
       </makeCustomizationType>
-      <item ex="true" overriding="false" path="../BSP-FILES/pdfusb_4550.c">
+      <item path="../BSP-FILES/pdfusb_4550.c" ex="true" overriding="false">
         <C18>
         </C18>
         <C18-AS>
@@ -105,7 +112,7 @@
         <C18LanguageToolchain>
         </C18LanguageToolchain>
       </item>
-      <item ex="true" overriding="false" path="../BSP-FILES/pdusb_25K50.c">
+      <item path="../BSP-FILES/pdusb_25K50.c" ex="true" overriding="false">
         <C18>
         </C18>
         <C18-AS>
@@ -115,7 +122,7 @@
         <C18LanguageToolchain>
         </C18LanguageToolchain>
       </item>
-      <item ex="true" overriding="false" path="../BSP-FILES/pdusb_25K50.h">
+      <item path="../BSP-FILES/pdusb_25K50.h" ex="true" overriding="false">
         <C18>
         </C18>
         <C18-AS>
@@ -125,7 +132,7 @@
         <C18LanguageToolchain>
         </C18LanguageToolchain>
       </item>
-      <item ex="true" overriding="false" path="../BSP-FILES/pdusb_27J53.c">
+      <item path="../BSP-FILES/pdusb_27J53.c" ex="true" overriding="false">
         <C18>
         </C18>
         <C18-AS>
@@ -135,7 +142,7 @@
         <C18LanguageToolchain>
         </C18LanguageToolchain>
       </item>
-      <item ex="true" overriding="false" path="../BSP-FILES/pdusb_27J53.h">
+      <item path="../BSP-FILES/pdusb_27J53.h" ex="true" overriding="false">
         <C18>
         </C18>
         <C18-AS>
@@ -145,7 +152,7 @@
         <C18LanguageToolchain>
         </C18LanguageToolchain>
       </item>
-      <item ex="true" overriding="false" path="../BSP-FILES/pdusb_4550.h">
+      <item path="../BSP-FILES/pdusb_4550.h" ex="true" overriding="false">
         <C18>
         </C18>
         <C18-AS>
@@ -173,7 +180,8 @@
         <property key="enable-ot" value="true"/>
         <property key="enable-ou" value="true"/>
         <property key="enable-ow" value="true"/>
-        <property key="extra-include-directories" value="../mla/v2014_07_22/framework;./"/>
+        <property key="extra-include-directories"
+                  value="../mla/v2014_07_22/framework;./"/>
         <property key="optimization-master" value="Enable all"/>
         <property key="preprocessor-macros" value="COMPILER_MPLAB_C18"/>
         <property key="procedural-abstraction-passes" value="4"/>
@@ -182,6 +190,12 @@
         <property key="warning-level" value="2"/>
       </C18>
       <C18-AS>
+        <property key="cross.reference.file" value=""/>
+        <property key="default.radix" value="HEX"/>
+        <property key="enable.case.sensitivity" value="true"/>
+        <property key="hex.output.format" value="INHX32"/>
+        <property key="preprocessor.macros" value=""/>
+        <property key="warning.level" value="0"/>
       </C18-AS>
       <C18-LD>
         <property key="cod-file" value="false"/>
@@ -200,9 +214,9 @@
       </C18LanguageToolchain>
       <PICkit3PlatformTool>
         <property key="AutoSelectMemRanges" value="auto"/>
-        <property key="Freeze Peripherals" value="true"/>
         <property key="SecureSegment.SegmentProgramming" value="FullChipProgramming"/>
-        <property key="ToolFirmwareFilePath" value="Press to browse for a specific firmware version"/>
+        <property key="ToolFirmwareFilePath"
+                  value="Press to browse for a specific firmware version"/>
         <property key="ToolFirmwareOption.UseLatestFirmware" value="true"/>
         <property key="hwtoolclock.frcindebug" value="false"/>
         <property key="memories.aux" value="false"/>
@@ -216,8 +230,10 @@
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.end" value="0x3fff"/>
         <property key="memories.programmemory.partition2" value="true"/>
-        <property key="memories.programmemory.partition2.end" value="${memories.programmemory.partition2.end.value}"/>
-        <property key="memories.programmemory.partition2.start" value="${memories.programmemory.partition2.start.value}"/>
+        <property key="memories.programmemory.partition2.end"
+                  value="${memories.programmemory.partition2.end.value}"/>
+        <property key="memories.programmemory.partition2.start"
+                  value="${memories.programmemory.partition2.start.value}"/>
         <property key="memories.programmemory.start" value="0x0"/>
         <property key="poweroptions.powerenable" value="true"/>
         <property key="programmertogo.imagename" value=""/>
@@ -242,8 +258,8 @@
       <toolsSet>
         <developmentServer>localhost</developmentServer>
         <targetDevice>PIC18F14K50</targetDevice>
-        <targetHeader/>
-        <targetPluginBoard/>
+        <targetHeader></targetHeader>
+        <targetPluginBoard></targetPluginBoard>
         <platformTool>PICkit3PlatformTool</platformTool>
         <languageToolchain>XC8</languageToolchain>
         <languageToolchainVersion>1.31</languageToolchainVersion>
@@ -259,19 +275,19 @@
         <loading>
           <useAlternateLoadableFile>false</useAlternateLoadableFile>
           <parseOnProdLoad>false</parseOnProdLoad>
-          <alternateLoadableFile/>
+          <alternateLoadableFile></alternateLoadableFile>
         </loading>
       </compileType>
       <makeCustomizationType>
         <makeCustomizationPreStepEnabled>false</makeCustomizationPreStepEnabled>
-        <makeCustomizationPreStep/>
+        <makeCustomizationPreStep></makeCustomizationPreStep>
         <makeCustomizationPostStepEnabled>false</makeCustomizationPostStepEnabled>
-        <makeCustomizationPostStep/>
+        <makeCustomizationPostStep></makeCustomizationPostStep>
         <makeCustomizationPutChecksumInUserID>false</makeCustomizationPutChecksumInUserID>
         <makeCustomizationEnableLongLines>false</makeCustomizationEnableLongLines>
         <makeCustomizationNormalizeHexFile>false</makeCustomizationNormalizeHexFile>
       </makeCustomizationType>
-      <item ex="true" overriding="false" path="../BSP-FILES/pdfusb_4550.c">
+      <item path="../BSP-FILES/pdfusb_4550.c" ex="true" overriding="false">
         <HI-TECH-COMP>
         </HI-TECH-COMP>
         <HI-TECH-LINK>
@@ -279,7 +295,7 @@
         <XC8-config-global>
         </XC8-config-global>
       </item>
-      <item ex="true" overriding="false" path="../BSP-FILES/pdusb_25K50.c">
+      <item path="../BSP-FILES/pdusb_25K50.c" ex="true" overriding="false">
         <HI-TECH-COMP>
         </HI-TECH-COMP>
         <HI-TECH-LINK>
@@ -287,7 +303,7 @@
         <XC8-config-global>
         </XC8-config-global>
       </item>
-      <item ex="true" overriding="false" path="../BSP-FILES/pdusb_25K50.h">
+      <item path="../BSP-FILES/pdusb_25K50.h" ex="true" overriding="false">
         <HI-TECH-COMP>
         </HI-TECH-COMP>
         <HI-TECH-LINK>
@@ -295,7 +311,7 @@
         <XC8-config-global>
         </XC8-config-global>
       </item>
-      <item ex="true" overriding="false" path="../BSP-FILES/pdusb_27J53.c">
+      <item path="../BSP-FILES/pdusb_27J53.c" ex="true" overriding="false">
         <HI-TECH-COMP>
         </HI-TECH-COMP>
         <HI-TECH-LINK>
@@ -303,7 +319,7 @@
         <XC8-config-global>
         </XC8-config-global>
       </item>
-      <item ex="true" overriding="false" path="../BSP-FILES/pdusb_27J53.h">
+      <item path="../BSP-FILES/pdusb_27J53.h" ex="true" overriding="false">
         <HI-TECH-COMP>
         </HI-TECH-COMP>
         <HI-TECH-LINK>
@@ -311,7 +327,7 @@
         <XC8-config-global>
         </XC8-config-global>
       </item>
-      <item ex="true" overriding="false" path="../BSP-FILES/pdusb_4550.h">
+      <item path="../BSP-FILES/pdusb_4550.h" ex="true" overriding="false">
         <HI-TECH-COMP>
         </HI-TECH-COMP>
         <HI-TECH-LINK>
@@ -322,7 +338,8 @@
       <HI-TECH-COMP>
         <property key="asmlist" value="true"/>
         <property key="define-macros" value=""/>
-        <property key="extra-include-directories" value="./;./plib;../mla/v2014_07_22/framework"/>
+        <property key="extra-include-directories"
+                  value="./;./plib;../mla/v2014_07_22/framework"/>
         <property key="identifier-length" value="255"/>
         <property key="operation-mode" value="free"/>
         <property key="opt-xc8-compiler-strict_ansi" value="false"/>
@@ -385,11 +402,10 @@
       </HI-TECH-LINK>
       <PICkit3PlatformTool>
         <property key="AutoSelectMemRanges" value="auto"/>
-        <property key="Freeze Peripherals" value="true"/>
         <property key="SecureSegment.SegmentProgramming" value="FullChipProgramming"/>
-        <property key="ToolFirmwareFilePath" value="Press to browse for a specific firmware version"/>
+        <property key="ToolFirmwareFilePath"
+                  value="Press to browse for a specific firmware version"/>
         <property key="ToolFirmwareOption.UseLatestFirmware" value="true"/>
-        <property key="firmware.download.all" value="false"/>
         <property key="hwtoolclock.frcindebug" value="false"/>
         <property key="memories.aux" value="false"/>
         <property key="memories.bootflash" value="true"/>
@@ -402,8 +418,10 @@
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.end" value="0x3fff"/>
         <property key="memories.programmemory.partition2" value="true"/>
-        <property key="memories.programmemory.partition2.end" value="${memories.programmemory.partition2.end.value}"/>
-        <property key="memories.programmemory.partition2.start" value="${memories.programmemory.partition2.start.value}"/>
+        <property key="memories.programmemory.partition2.end"
+                  value="${memories.programmemory.partition2.end.value}"/>
+        <property key="memories.programmemory.partition2.start"
+                  value="${memories.programmemory.partition2.start.value}"/>
         <property key="memories.programmemory.start" value="0x0"/>
         <property key="poweroptions.powerenable" value="true"/>
         <property key="programmertogo.imagename" value=""/>
@@ -437,7 +455,7 @@
         <developmentServer>localhost</developmentServer>
         <targetDevice>PIC18F14K50</targetDevice>
         <targetHeader>AC244023</targetHeader>
-        <targetPluginBoard/>
+        <targetPluginBoard></targetPluginBoard>
         <platformTool>PICkit3PlatformTool</platformTool>
         <languageToolchain>C18</languageToolchain>
         <languageToolchainVersion>3.47</languageToolchainVersion>
@@ -453,19 +471,19 @@
         <loading>
           <useAlternateLoadableFile>false</useAlternateLoadableFile>
           <parseOnProdLoad>false</parseOnProdLoad>
-          <alternateLoadableFile/>
+          <alternateLoadableFile></alternateLoadableFile>
         </loading>
       </compileType>
       <makeCustomizationType>
         <makeCustomizationPreStepEnabled>false</makeCustomizationPreStepEnabled>
-        <makeCustomizationPreStep/>
+        <makeCustomizationPreStep></makeCustomizationPreStep>
         <makeCustomizationPostStepEnabled>false</makeCustomizationPostStepEnabled>
-        <makeCustomizationPostStep/>
+        <makeCustomizationPostStep></makeCustomizationPostStep>
         <makeCustomizationPutChecksumInUserID>false</makeCustomizationPutChecksumInUserID>
         <makeCustomizationEnableLongLines>false</makeCustomizationEnableLongLines>
         <makeCustomizationNormalizeHexFile>false</makeCustomizationNormalizeHexFile>
       </makeCustomizationType>
-      <item ex="true" overriding="false" path="../BSP-FILES/pdfusb_4550.c">
+      <item path="../BSP-FILES/pdfusb_4550.c" ex="true" overriding="false">
         <C18>
         </C18>
         <C18-AS>
@@ -475,7 +493,7 @@
         <C18LanguageToolchain>
         </C18LanguageToolchain>
       </item>
-      <item ex="true" overriding="false" path="../BSP-FILES/pdusb_25K50.c">
+      <item path="../BSP-FILES/pdusb_25K50.c" ex="true" overriding="false">
         <C18>
         </C18>
         <C18-AS>
@@ -485,7 +503,7 @@
         <C18LanguageToolchain>
         </C18LanguageToolchain>
       </item>
-      <item ex="true" overriding="false" path="../BSP-FILES/pdusb_25K50.h">
+      <item path="../BSP-FILES/pdusb_25K50.h" ex="true" overriding="false">
         <C18>
         </C18>
         <C18-AS>
@@ -495,7 +513,7 @@
         <C18LanguageToolchain>
         </C18LanguageToolchain>
       </item>
-      <item ex="true" overriding="false" path="../BSP-FILES/pdusb_27J53.c">
+      <item path="../BSP-FILES/pdusb_27J53.c" ex="true" overriding="false">
         <C18>
         </C18>
         <C18-AS>
@@ -505,7 +523,7 @@
         <C18LanguageToolchain>
         </C18LanguageToolchain>
       </item>
-      <item ex="true" overriding="false" path="../BSP-FILES/pdusb_27J53.h">
+      <item path="../BSP-FILES/pdusb_27J53.h" ex="true" overriding="false">
         <C18>
         </C18>
         <C18-AS>
@@ -515,7 +533,7 @@
         <C18LanguageToolchain>
         </C18LanguageToolchain>
       </item>
-      <item ex="true" overriding="false" path="../BSP-FILES/pdusb_4550.h">
+      <item path="../BSP-FILES/pdusb_4550.h" ex="true" overriding="false">
         <C18>
         </C18>
         <C18-AS>
@@ -543,7 +561,8 @@
         <property key="enable-ot" value="true"/>
         <property key="enable-ou" value="true"/>
         <property key="enable-ow" value="true"/>
-        <property key="extra-include-directories" value="../mla/v2014_07_22/framework;./"/>
+        <property key="extra-include-directories"
+                  value="../mla/v2014_07_22/framework;./"/>
         <property key="optimization-master" value="Enable all"/>
         <property key="preprocessor-macros" value="COMPILER_MPLAB_C18"/>
         <property key="procedural-abstraction-passes" value="4"/>
@@ -551,8 +570,6 @@
         <property key="verbose" value="false"/>
         <property key="warning-level" value="2"/>
       </C18>
-      <C18-AS>
-      </C18-AS>
       <C18-LD>
         <property key="cod-file" value="false"/>
         <property key="extra-lib-directories" value=""/>
@@ -570,9 +587,9 @@
       </C18LanguageToolchain>
       <PICkit3PlatformTool>
         <property key="AutoSelectMemRanges" value="auto"/>
-        <property key="Freeze Peripherals" value="true"/>
         <property key="SecureSegment.SegmentProgramming" value="FullChipProgramming"/>
-        <property key="ToolFirmwareFilePath" value="Press to browse for a specific firmware version"/>
+        <property key="ToolFirmwareFilePath"
+                  value="Press to browse for a specific firmware version"/>
         <property key="ToolFirmwareOption.UseLatestFirmware" value="true"/>
         <property key="hwtoolclock.frcindebug" value="false"/>
         <property key="memories.aux" value="false"/>
@@ -586,8 +603,10 @@
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.end" value="0x3fff"/>
         <property key="memories.programmemory.partition2" value="true"/>
-        <property key="memories.programmemory.partition2.end" value="${memories.programmemory.partition2.end.value}"/>
-        <property key="memories.programmemory.partition2.start" value="${memories.programmemory.partition2.start.value}"/>
+        <property key="memories.programmemory.partition2.end"
+                  value="${memories.programmemory.partition2.end.value}"/>
+        <property key="memories.programmemory.partition2.start"
+                  value="${memories.programmemory.partition2.start.value}"/>
         <property key="memories.programmemory.start" value="0x0"/>
         <property key="poweroptions.powerenable" value="true"/>
         <property key="programmertogo.imagename" value=""/>
@@ -612,8 +631,8 @@
       <toolsSet>
         <developmentServer>localhost</developmentServer>
         <targetDevice>PIC18F4550</targetDevice>
-        <targetHeader/>
-        <targetPluginBoard/>
+        <targetHeader></targetHeader>
+        <targetPluginBoard></targetPluginBoard>
         <platformTool>PICkit3PlatformTool</platformTool>
         <languageToolchain>C18</languageToolchain>
         <languageToolchainVersion>3.47</languageToolchainVersion>
@@ -629,19 +648,19 @@
         <loading>
           <useAlternateLoadableFile>false</useAlternateLoadableFile>
           <parseOnProdLoad>false</parseOnProdLoad>
-          <alternateLoadableFile/>
+          <alternateLoadableFile></alternateLoadableFile>
         </loading>
       </compileType>
       <makeCustomizationType>
         <makeCustomizationPreStepEnabled>false</makeCustomizationPreStepEnabled>
-        <makeCustomizationPreStep/>
+        <makeCustomizationPreStep></makeCustomizationPreStep>
         <makeCustomizationPostStepEnabled>false</makeCustomizationPostStepEnabled>
-        <makeCustomizationPostStep/>
+        <makeCustomizationPostStep></makeCustomizationPostStep>
         <makeCustomizationPutChecksumInUserID>false</makeCustomizationPutChecksumInUserID>
         <makeCustomizationEnableLongLines>false</makeCustomizationEnableLongLines>
         <makeCustomizationNormalizeHexFile>false</makeCustomizationNormalizeHexFile>
       </makeCustomizationType>
-      <item ex="true" overriding="false" path="../BSP-FILES/lpcudk_14K50.c">
+      <item path="../BSP-FILES/lpcudk_14K50.c" ex="true" overriding="false">
         <C18>
         </C18>
         <C18-AS>
@@ -651,7 +670,7 @@
         <C18LanguageToolchain>
         </C18LanguageToolchain>
       </item>
-      <item ex="true" overriding="false" path="../BSP-FILES/lpcudk_14K50.h">
+      <item path="../BSP-FILES/lpcudk_14K50.h" ex="true" overriding="false">
         <C18>
         </C18>
         <C18-AS>
@@ -661,7 +680,7 @@
         <C18LanguageToolchain>
         </C18LanguageToolchain>
       </item>
-      <item ex="true" overriding="false" path="../BSP-FILES/pdusb_25K50.c">
+      <item path="../BSP-FILES/pdusb_25K50.c" ex="true" overriding="false">
         <C18>
         </C18>
         <C18-AS>
@@ -671,7 +690,7 @@
         <C18LanguageToolchain>
         </C18LanguageToolchain>
       </item>
-      <item ex="true" overriding="false" path="../BSP-FILES/pdusb_25K50.h">
+      <item path="../BSP-FILES/pdusb_25K50.h" ex="true" overriding="false">
         <C18>
         </C18>
         <C18-AS>
@@ -681,7 +700,7 @@
         <C18LanguageToolchain>
         </C18LanguageToolchain>
       </item>
-      <item ex="true" overriding="false" path="../BSP-FILES/pdusb_27J53.c">
+      <item path="../BSP-FILES/pdusb_27J53.c" ex="true" overriding="false">
         <C18>
         </C18>
         <C18-AS>
@@ -691,7 +710,7 @@
         <C18LanguageToolchain>
         </C18LanguageToolchain>
       </item>
-      <item ex="true" overriding="false" path="../BSP-FILES/pdusb_27J53.h">
+      <item path="../BSP-FILES/pdusb_27J53.h" ex="true" overriding="false">
         <C18>
         </C18>
         <C18-AS>
@@ -719,7 +738,8 @@
         <property key="enable-ot" value="true"/>
         <property key="enable-ou" value="true"/>
         <property key="enable-ow" value="true"/>
-        <property key="extra-include-directories" value="../mla/v2014_07_22/framework;./"/>
+        <property key="extra-include-directories"
+                  value="../mla/v2014_07_22/framework;./"/>
         <property key="optimization-master" value="Enable all"/>
         <property key="preprocessor-macros" value="COMPILER_MPLAB_C18"/>
         <property key="procedural-abstraction-passes" value="4"/>
@@ -727,8 +747,6 @@
         <property key="verbose" value="false"/>
         <property key="warning-level" value="2"/>
       </C18>
-      <C18-AS>
-      </C18-AS>
       <C18-LD>
         <property key="cod-file" value="false"/>
         <property key="extra-lib-directories" value=""/>
@@ -746,9 +764,9 @@
       </C18LanguageToolchain>
       <PICkit3PlatformTool>
         <property key="AutoSelectMemRanges" value="auto"/>
-        <property key="Freeze Peripherals" value="true"/>
         <property key="SecureSegment.SegmentProgramming" value="FullChipProgramming"/>
-        <property key="ToolFirmwareFilePath" value="Press to browse for a specific firmware version"/>
+        <property key="ToolFirmwareFilePath"
+                  value="Press to browse for a specific firmware version"/>
         <property key="ToolFirmwareOption.UseLatestFirmware" value="true"/>
         <property key="hwtoolclock.frcindebug" value="false"/>
         <property key="memories.aux" value="false"/>
@@ -762,8 +780,10 @@
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.end" value="0x3fff"/>
         <property key="memories.programmemory.partition2" value="true"/>
-        <property key="memories.programmemory.partition2.end" value="${memories.programmemory.partition2.end.value}"/>
-        <property key="memories.programmemory.partition2.start" value="${memories.programmemory.partition2.start.value}"/>
+        <property key="memories.programmemory.partition2.end"
+                  value="${memories.programmemory.partition2.end.value}"/>
+        <property key="memories.programmemory.partition2.start"
+                  value="${memories.programmemory.partition2.start.value}"/>
         <property key="memories.programmemory.start" value="0x0"/>
         <property key="poweroptions.powerenable" value="true"/>
         <property key="programmertogo.imagename" value=""/>
@@ -788,11 +808,11 @@
       <toolsSet>
         <developmentServer>localhost</developmentServer>
         <targetDevice>PIC18F4550</targetDevice>
-        <targetHeader/>
-        <targetPluginBoard/>
+        <targetHeader></targetHeader>
+        <targetPluginBoard></targetPluginBoard>
         <platformTool>PICkit3PlatformTool</platformTool>
         <languageToolchain>XC8</languageToolchain>
-        <languageToolchainVersion>1.31</languageToolchainVersion>
+        <languageToolchainVersion></languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <compileType>
@@ -805,19 +825,19 @@
         <loading>
           <useAlternateLoadableFile>false</useAlternateLoadableFile>
           <parseOnProdLoad>false</parseOnProdLoad>
-          <alternateLoadableFile/>
+          <alternateLoadableFile></alternateLoadableFile>
         </loading>
       </compileType>
       <makeCustomizationType>
         <makeCustomizationPreStepEnabled>false</makeCustomizationPreStepEnabled>
-        <makeCustomizationPreStep/>
+        <makeCustomizationPreStep></makeCustomizationPreStep>
         <makeCustomizationPostStepEnabled>false</makeCustomizationPostStepEnabled>
-        <makeCustomizationPostStep/>
+        <makeCustomizationPostStep></makeCustomizationPostStep>
         <makeCustomizationPutChecksumInUserID>false</makeCustomizationPutChecksumInUserID>
         <makeCustomizationEnableLongLines>false</makeCustomizationEnableLongLines>
         <makeCustomizationNormalizeHexFile>false</makeCustomizationNormalizeHexFile>
       </makeCustomizationType>
-      <item ex="true" overriding="false" path="../BSP-FILES/lpcudk_14K50.c">
+      <item path="../BSP-FILES/lpcudk_14K50.c" ex="true" overriding="false">
         <HI-TECH-COMP>
         </HI-TECH-COMP>
         <HI-TECH-LINK>
@@ -825,7 +845,7 @@
         <XC8-config-global>
         </XC8-config-global>
       </item>
-      <item ex="true" overriding="false" path="../BSP-FILES/lpcudk_14K50.h">
+      <item path="../BSP-FILES/lpcudk_14K50.h" ex="true" overriding="false">
         <HI-TECH-COMP>
         </HI-TECH-COMP>
         <HI-TECH-LINK>
@@ -833,7 +853,7 @@
         <XC8-config-global>
         </XC8-config-global>
       </item>
-      <item ex="true" overriding="false" path="../BSP-FILES/pdusb_25K50.c">
+      <item path="../BSP-FILES/pdusb_25K50.c" ex="true" overriding="false">
         <HI-TECH-COMP>
         </HI-TECH-COMP>
         <HI-TECH-LINK>
@@ -841,7 +861,7 @@
         <XC8-config-global>
         </XC8-config-global>
       </item>
-      <item ex="true" overriding="false" path="../BSP-FILES/pdusb_25K50.h">
+      <item path="../BSP-FILES/pdusb_25K50.h" ex="true" overriding="false">
         <HI-TECH-COMP>
         </HI-TECH-COMP>
         <HI-TECH-LINK>
@@ -849,7 +869,7 @@
         <XC8-config-global>
         </XC8-config-global>
       </item>
-      <item ex="true" overriding="false" path="../BSP-FILES/pdusb_27J53.c">
+      <item path="../BSP-FILES/pdusb_27J53.c" ex="true" overriding="false">
         <HI-TECH-COMP>
         </HI-TECH-COMP>
         <HI-TECH-LINK>
@@ -857,7 +877,7 @@
         <XC8-config-global>
         </XC8-config-global>
       </item>
-      <item ex="true" overriding="false" path="../BSP-FILES/pdusb_27J53.h">
+      <item path="../BSP-FILES/pdusb_27J53.h" ex="true" overriding="false">
         <HI-TECH-COMP>
         </HI-TECH-COMP>
         <HI-TECH-LINK>
@@ -868,7 +888,8 @@
       <HI-TECH-COMP>
         <property key="asmlist" value="true"/>
         <property key="define-macros" value=""/>
-        <property key="extra-include-directories" value="../mla/v2014_07_22/framework;./"/>
+        <property key="extra-include-directories"
+                  value="../mla/v2014_07_22/framework;./"/>
         <property key="identifier-length" value="255"/>
         <property key="operation-mode" value="free"/>
         <property key="opt-xc8-compiler-strict_ansi" value="false"/>
@@ -931,9 +952,9 @@
       </HI-TECH-LINK>
       <PICkit3PlatformTool>
         <property key="AutoSelectMemRanges" value="auto"/>
-        <property key="Freeze Peripherals" value="true"/>
         <property key="SecureSegment.SegmentProgramming" value="FullChipProgramming"/>
-        <property key="ToolFirmwareFilePath" value="Press to browse for a specific firmware version"/>
+        <property key="ToolFirmwareFilePath"
+                  value="Press to browse for a specific firmware version"/>
         <property key="ToolFirmwareOption.UseLatestFirmware" value="true"/>
         <property key="hwtoolclock.frcindebug" value="false"/>
         <property key="memories.aux" value="false"/>
@@ -947,8 +968,10 @@
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.end" value="0x3fff"/>
         <property key="memories.programmemory.partition2" value="true"/>
-        <property key="memories.programmemory.partition2.end" value="${memories.programmemory.partition2.end.value}"/>
-        <property key="memories.programmemory.partition2.start" value="${memories.programmemory.partition2.start.value}"/>
+        <property key="memories.programmemory.partition2.end"
+                  value="${memories.programmemory.partition2.end.value}"/>
+        <property key="memories.programmemory.partition2.start"
+                  value="${memories.programmemory.partition2.start.value}"/>
         <property key="memories.programmemory.start" value="0x0"/>
         <property key="poweroptions.powerenable" value="true"/>
         <property key="programmertogo.imagename" value=""/>
@@ -981,8 +1004,8 @@
       <toolsSet>
         <developmentServer>localhost</developmentServer>
         <targetDevice>PIC18F27J53</targetDevice>
-        <targetHeader/>
-        <targetPluginBoard/>
+        <targetHeader></targetHeader>
+        <targetPluginBoard></targetPluginBoard>
         <platformTool>PICkit3PlatformTool</platformTool>
         <languageToolchain>C18</languageToolchain>
         <languageToolchainVersion>3.47</languageToolchainVersion>
@@ -998,19 +1021,19 @@
         <loading>
           <useAlternateLoadableFile>false</useAlternateLoadableFile>
           <parseOnProdLoad>false</parseOnProdLoad>
-          <alternateLoadableFile/>
+          <alternateLoadableFile></alternateLoadableFile>
         </loading>
       </compileType>
       <makeCustomizationType>
         <makeCustomizationPreStepEnabled>false</makeCustomizationPreStepEnabled>
-        <makeCustomizationPreStep/>
+        <makeCustomizationPreStep></makeCustomizationPreStep>
         <makeCustomizationPostStepEnabled>false</makeCustomizationPostStepEnabled>
-        <makeCustomizationPostStep/>
+        <makeCustomizationPostStep></makeCustomizationPostStep>
         <makeCustomizationPutChecksumInUserID>false</makeCustomizationPutChecksumInUserID>
         <makeCustomizationEnableLongLines>false</makeCustomizationEnableLongLines>
         <makeCustomizationNormalizeHexFile>false</makeCustomizationNormalizeHexFile>
       </makeCustomizationType>
-      <item ex="true" overriding="false" path="../BSP-FILES/lpcudk_14K50.c">
+      <item path="../BSP-FILES/lpcudk_14K50.c" ex="true" overriding="false">
         <C18>
         </C18>
         <C18-AS>
@@ -1020,7 +1043,7 @@
         <C18LanguageToolchain>
         </C18LanguageToolchain>
       </item>
-      <item ex="true" overriding="false" path="../BSP-FILES/lpcudk_14K50.h">
+      <item path="../BSP-FILES/lpcudk_14K50.h" ex="true" overriding="false">
         <C18>
         </C18>
         <C18-AS>
@@ -1030,7 +1053,7 @@
         <C18LanguageToolchain>
         </C18LanguageToolchain>
       </item>
-      <item ex="true" overriding="false" path="../BSP-FILES/pdfusb_4550.c">
+      <item path="../BSP-FILES/pdfusb_4550.c" ex="true" overriding="false">
         <C18>
         </C18>
         <C18-AS>
@@ -1040,7 +1063,7 @@
         <C18LanguageToolchain>
         </C18LanguageToolchain>
       </item>
-      <item ex="true" overriding="false" path="../BSP-FILES/pdusb_25K50.c">
+      <item path="../BSP-FILES/pdusb_25K50.c" ex="true" overriding="false">
         <C18>
         </C18>
         <C18-AS>
@@ -1050,7 +1073,7 @@
         <C18LanguageToolchain>
         </C18LanguageToolchain>
       </item>
-      <item ex="true" overriding="false" path="../BSP-FILES/pdusb_25K50.h">
+      <item path="../BSP-FILES/pdusb_25K50.h" ex="true" overriding="false">
         <C18>
         </C18>
         <C18-AS>
@@ -1060,7 +1083,7 @@
         <C18LanguageToolchain>
         </C18LanguageToolchain>
       </item>
-      <item ex="true" overriding="false" path="../BSP-FILES/pdusb_4550.h">
+      <item path="../BSP-FILES/pdusb_4550.h" ex="true" overriding="false">
         <C18>
         </C18>
         <C18-AS>
@@ -1088,7 +1111,8 @@
         <property key="enable-ot" value="true"/>
         <property key="enable-ou" value="true"/>
         <property key="enable-ow" value="true"/>
-        <property key="extra-include-directories" value="../mla/v2014_07_22/framework;./"/>
+        <property key="extra-include-directories"
+                  value="../mla/v2014_07_22/framework;./"/>
         <property key="optimization-master" value="Enable all"/>
         <property key="preprocessor-macros" value="COMPILER_MPLAB_C18"/>
         <property key="procedural-abstraction-passes" value="4"/>
@@ -1096,8 +1120,6 @@
         <property key="verbose" value="false"/>
         <property key="warning-level" value="2"/>
       </C18>
-      <C18-AS>
-      </C18-AS>
       <C18-LD>
         <property key="cod-file" value="false"/>
         <property key="extra-lib-directories" value=""/>
@@ -1115,9 +1137,9 @@
       </C18LanguageToolchain>
       <PICkit3PlatformTool>
         <property key="AutoSelectMemRanges" value="auto"/>
-        <property key="Freeze Peripherals" value="true"/>
         <property key="SecureSegment.SegmentProgramming" value="FullChipProgramming"/>
-        <property key="ToolFirmwareFilePath" value="Press to browse for a specific firmware version"/>
+        <property key="ToolFirmwareFilePath"
+                  value="Press to browse for a specific firmware version"/>
         <property key="ToolFirmwareOption.UseLatestFirmware" value="true"/>
         <property key="hwtoolclock.frcindebug" value="false"/>
         <property key="memories.aux" value="false"/>
@@ -1131,8 +1153,10 @@
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.end" value="0x3fff"/>
         <property key="memories.programmemory.partition2" value="true"/>
-        <property key="memories.programmemory.partition2.end" value="${memories.programmemory.partition2.end.value}"/>
-        <property key="memories.programmemory.partition2.start" value="${memories.programmemory.partition2.start.value}"/>
+        <property key="memories.programmemory.partition2.end"
+                  value="${memories.programmemory.partition2.end.value}"/>
+        <property key="memories.programmemory.partition2.start"
+                  value="${memories.programmemory.partition2.start.value}"/>
         <property key="memories.programmemory.start" value="0x0"/>
         <property key="poweroptions.powerenable" value="true"/>
         <property key="programmertogo.imagename" value=""/>
@@ -1157,8 +1181,8 @@
       <toolsSet>
         <developmentServer>localhost</developmentServer>
         <targetDevice>PIC18F27J53</targetDevice>
-        <targetHeader/>
-        <targetPluginBoard/>
+        <targetHeader></targetHeader>
+        <targetPluginBoard></targetPluginBoard>
         <platformTool>PICkit3PlatformTool</platformTool>
         <languageToolchain>XC8</languageToolchain>
         <languageToolchainVersion>1.31</languageToolchainVersion>
@@ -1174,19 +1198,19 @@
         <loading>
           <useAlternateLoadableFile>false</useAlternateLoadableFile>
           <parseOnProdLoad>false</parseOnProdLoad>
-          <alternateLoadableFile/>
+          <alternateLoadableFile></alternateLoadableFile>
         </loading>
       </compileType>
       <makeCustomizationType>
         <makeCustomizationPreStepEnabled>false</makeCustomizationPreStepEnabled>
-        <makeCustomizationPreStep/>
+        <makeCustomizationPreStep></makeCustomizationPreStep>
         <makeCustomizationPostStepEnabled>false</makeCustomizationPostStepEnabled>
-        <makeCustomizationPostStep/>
+        <makeCustomizationPostStep></makeCustomizationPostStep>
         <makeCustomizationPutChecksumInUserID>false</makeCustomizationPutChecksumInUserID>
         <makeCustomizationEnableLongLines>false</makeCustomizationEnableLongLines>
         <makeCustomizationNormalizeHexFile>false</makeCustomizationNormalizeHexFile>
       </makeCustomizationType>
-      <item ex="true" overriding="false" path="../BSP-FILES/lpcudk_14K50.c">
+      <item path="../BSP-FILES/lpcudk_14K50.c" ex="true" overriding="false">
         <HI-TECH-COMP>
         </HI-TECH-COMP>
         <HI-TECH-LINK>
@@ -1194,7 +1218,7 @@
         <XC8-config-global>
         </XC8-config-global>
       </item>
-      <item ex="true" overriding="false" path="../BSP-FILES/lpcudk_14K50.h">
+      <item path="../BSP-FILES/lpcudk_14K50.h" ex="true" overriding="false">
         <HI-TECH-COMP>
         </HI-TECH-COMP>
         <HI-TECH-LINK>
@@ -1202,7 +1226,7 @@
         <XC8-config-global>
         </XC8-config-global>
       </item>
-      <item ex="true" overriding="false" path="../BSP-FILES/pdfusb_4550.c">
+      <item path="../BSP-FILES/pdfusb_4550.c" ex="true" overriding="false">
         <HI-TECH-COMP>
         </HI-TECH-COMP>
         <HI-TECH-LINK>
@@ -1210,7 +1234,7 @@
         <XC8-config-global>
         </XC8-config-global>
       </item>
-      <item ex="true" overriding="false" path="../BSP-FILES/pdusb_25K50.c">
+      <item path="../BSP-FILES/pdusb_25K50.c" ex="true" overriding="false">
         <HI-TECH-COMP>
         </HI-TECH-COMP>
         <HI-TECH-LINK>
@@ -1218,7 +1242,7 @@
         <XC8-config-global>
         </XC8-config-global>
       </item>
-      <item ex="true" overriding="false" path="../BSP-FILES/pdusb_25K50.h">
+      <item path="../BSP-FILES/pdusb_25K50.h" ex="true" overriding="false">
         <HI-TECH-COMP>
         </HI-TECH-COMP>
         <HI-TECH-LINK>
@@ -1226,7 +1250,7 @@
         <XC8-config-global>
         </XC8-config-global>
       </item>
-      <item ex="true" overriding="false" path="../BSP-FILES/pdusb_4550.h">
+      <item path="../BSP-FILES/pdusb_4550.h" ex="true" overriding="false">
         <HI-TECH-COMP>
         </HI-TECH-COMP>
         <HI-TECH-LINK>
@@ -1237,7 +1261,8 @@
       <HI-TECH-COMP>
         <property key="asmlist" value="true"/>
         <property key="define-macros" value=""/>
-        <property key="extra-include-directories" value="./;../mla/v2014_07_22/framework"/>
+        <property key="extra-include-directories"
+                  value="./;../mla/v2014_07_22/framework"/>
         <property key="identifier-length" value="255"/>
         <property key="operation-mode" value="free"/>
         <property key="opt-xc8-compiler-strict_ansi" value="false"/>
@@ -1300,9 +1325,9 @@
       </HI-TECH-LINK>
       <PICkit3PlatformTool>
         <property key="AutoSelectMemRanges" value="auto"/>
-        <property key="Freeze Peripherals" value="true"/>
         <property key="SecureSegment.SegmentProgramming" value="FullChipProgramming"/>
-        <property key="ToolFirmwareFilePath" value="Press to browse for a specific firmware version"/>
+        <property key="ToolFirmwareFilePath"
+                  value="Press to browse for a specific firmware version"/>
         <property key="ToolFirmwareOption.UseLatestFirmware" value="true"/>
         <property key="hwtoolclock.frcindebug" value="false"/>
         <property key="memories.aux" value="false"/>
@@ -1316,8 +1341,10 @@
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.end" value="0x3fff"/>
         <property key="memories.programmemory.partition2" value="true"/>
-        <property key="memories.programmemory.partition2.end" value="${memories.programmemory.partition2.end.value}"/>
-        <property key="memories.programmemory.partition2.start" value="${memories.programmemory.partition2.start.value}"/>
+        <property key="memories.programmemory.partition2.end"
+                  value="${memories.programmemory.partition2.end.value}"/>
+        <property key="memories.programmemory.partition2.start"
+                  value="${memories.programmemory.partition2.start.value}"/>
         <property key="memories.programmemory.start" value="0x0"/>
         <property key="poweroptions.powerenable" value="true"/>
         <property key="programmertogo.imagename" value=""/>
@@ -1350,8 +1377,8 @@
       <toolsSet>
         <developmentServer>localhost</developmentServer>
         <targetDevice>PIC18F25K50</targetDevice>
-        <targetHeader/>
-        <targetPluginBoard/>
+        <targetHeader></targetHeader>
+        <targetPluginBoard></targetPluginBoard>
         <platformTool>PICkit3PlatformTool</platformTool>
         <languageToolchain>C18</languageToolchain>
         <languageToolchainVersion>3.47</languageToolchainVersion>
@@ -1367,19 +1394,19 @@
         <loading>
           <useAlternateLoadableFile>false</useAlternateLoadableFile>
           <parseOnProdLoad>false</parseOnProdLoad>
-          <alternateLoadableFile/>
+          <alternateLoadableFile></alternateLoadableFile>
         </loading>
       </compileType>
       <makeCustomizationType>
         <makeCustomizationPreStepEnabled>false</makeCustomizationPreStepEnabled>
-        <makeCustomizationPreStep/>
+        <makeCustomizationPreStep></makeCustomizationPreStep>
         <makeCustomizationPostStepEnabled>false</makeCustomizationPostStepEnabled>
-        <makeCustomizationPostStep/>
+        <makeCustomizationPostStep></makeCustomizationPostStep>
         <makeCustomizationPutChecksumInUserID>false</makeCustomizationPutChecksumInUserID>
         <makeCustomizationEnableLongLines>false</makeCustomizationEnableLongLines>
         <makeCustomizationNormalizeHexFile>false</makeCustomizationNormalizeHexFile>
       </makeCustomizationType>
-      <item ex="true" overriding="false" path="../BSP-FILES/lpcudk_14K50.c">
+      <item path="../BSP-FILES/lpcudk_14K50.c" ex="true" overriding="false">
         <C18>
         </C18>
         <C18-AS>
@@ -1389,7 +1416,7 @@
         <C18LanguageToolchain>
         </C18LanguageToolchain>
       </item>
-      <item ex="true" overriding="false" path="../BSP-FILES/lpcudk_14K50.h">
+      <item path="../BSP-FILES/lpcudk_14K50.h" ex="true" overriding="false">
         <C18>
         </C18>
         <C18-AS>
@@ -1399,7 +1426,7 @@
         <C18LanguageToolchain>
         </C18LanguageToolchain>
       </item>
-      <item ex="true" overriding="false" path="../BSP-FILES/pdfusb_4550.c">
+      <item path="../BSP-FILES/pdfusb_4550.c" ex="true" overriding="false">
         <C18>
         </C18>
         <C18-AS>
@@ -1409,7 +1436,7 @@
         <C18LanguageToolchain>
         </C18LanguageToolchain>
       </item>
-      <item ex="true" overriding="false" path="../BSP-FILES/pdusb_27J53.c">
+      <item path="../BSP-FILES/pdusb_27J53.c" ex="true" overriding="false">
         <C18>
         </C18>
         <C18-AS>
@@ -1419,7 +1446,7 @@
         <C18LanguageToolchain>
         </C18LanguageToolchain>
       </item>
-      <item ex="true" overriding="false" path="../BSP-FILES/pdusb_27J53.h">
+      <item path="../BSP-FILES/pdusb_27J53.h" ex="true" overriding="false">
         <C18>
         </C18>
         <C18-AS>
@@ -1429,7 +1456,7 @@
         <C18LanguageToolchain>
         </C18LanguageToolchain>
       </item>
-      <item ex="true" overriding="false" path="../BSP-FILES/pdusb_4550.h">
+      <item path="../BSP-FILES/pdusb_4550.h" ex="true" overriding="false">
         <C18>
         </C18>
         <C18-AS>
@@ -1457,7 +1484,8 @@
         <property key="enable-ot" value="true"/>
         <property key="enable-ou" value="true"/>
         <property key="enable-ow" value="true"/>
-        <property key="extra-include-directories" value="../mla/v2014_07_22/framework;./"/>
+        <property key="extra-include-directories"
+                  value="../mla/v2014_07_22/framework;./"/>
         <property key="optimization-master" value="Enable all"/>
         <property key="preprocessor-macros" value="COMPILER_MPLAB_C18"/>
         <property key="procedural-abstraction-passes" value="4"/>
@@ -1465,8 +1493,6 @@
         <property key="verbose" value="false"/>
         <property key="warning-level" value="2"/>
       </C18>
-      <C18-AS>
-      </C18-AS>
       <C18-LD>
         <property key="cod-file" value="false"/>
         <property key="extra-lib-directories" value=""/>
@@ -1484,11 +1510,10 @@
       </C18LanguageToolchain>
       <PICkit3PlatformTool>
         <property key="AutoSelectMemRanges" value="auto"/>
-        <property key="Freeze Peripherals" value="true"/>
         <property key="SecureSegment.SegmentProgramming" value="FullChipProgramming"/>
-        <property key="ToolFirmwareFilePath" value="Press to browse for a specific firmware version"/>
+        <property key="ToolFirmwareFilePath"
+                  value="Press to browse for a specific firmware version"/>
         <property key="ToolFirmwareOption.UseLatestFirmware" value="true"/>
-        <property key="firmware.download.all" value="false"/>
         <property key="hwtoolclock.frcindebug" value="false"/>
         <property key="memories.aux" value="false"/>
         <property key="memories.bootflash" value="true"/>
@@ -1501,8 +1526,10 @@
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.end" value="0x3fff"/>
         <property key="memories.programmemory.partition2" value="true"/>
-        <property key="memories.programmemory.partition2.end" value="${memories.programmemory.partition2.end.value}"/>
-        <property key="memories.programmemory.partition2.start" value="${memories.programmemory.partition2.start.value}"/>
+        <property key="memories.programmemory.partition2.end"
+                  value="${memories.programmemory.partition2.end.value}"/>
+        <property key="memories.programmemory.partition2.start"
+                  value="${memories.programmemory.partition2.start.value}"/>
         <property key="memories.programmemory.start" value="0x0"/>
         <property key="poweroptions.powerenable" value="true"/>
         <property key="programmertogo.imagename" value=""/>
@@ -1527,8 +1554,8 @@
       <toolsSet>
         <developmentServer>localhost</developmentServer>
         <targetDevice>PIC18F25K50</targetDevice>
-        <targetHeader/>
-        <targetPluginBoard/>
+        <targetHeader></targetHeader>
+        <targetPluginBoard></targetPluginBoard>
         <platformTool>PICkit3PlatformTool</platformTool>
         <languageToolchain>XC8</languageToolchain>
         <languageToolchainVersion>1.31</languageToolchainVersion>
@@ -1544,19 +1571,19 @@
         <loading>
           <useAlternateLoadableFile>false</useAlternateLoadableFile>
           <parseOnProdLoad>false</parseOnProdLoad>
-          <alternateLoadableFile/>
+          <alternateLoadableFile></alternateLoadableFile>
         </loading>
       </compileType>
       <makeCustomizationType>
         <makeCustomizationPreStepEnabled>false</makeCustomizationPreStepEnabled>
-        <makeCustomizationPreStep/>
+        <makeCustomizationPreStep></makeCustomizationPreStep>
         <makeCustomizationPostStepEnabled>false</makeCustomizationPostStepEnabled>
-        <makeCustomizationPostStep/>
+        <makeCustomizationPostStep></makeCustomizationPostStep>
         <makeCustomizationPutChecksumInUserID>false</makeCustomizationPutChecksumInUserID>
         <makeCustomizationEnableLongLines>false</makeCustomizationEnableLongLines>
         <makeCustomizationNormalizeHexFile>false</makeCustomizationNormalizeHexFile>
       </makeCustomizationType>
-      <item ex="true" overriding="false" path="../BSP-FILES/lpcudk_14K50.c">
+      <item path="../BSP-FILES/lpcudk_14K50.c" ex="true" overriding="false">
         <HI-TECH-COMP>
         </HI-TECH-COMP>
         <HI-TECH-LINK>
@@ -1564,7 +1591,7 @@
         <XC8-config-global>
         </XC8-config-global>
       </item>
-      <item ex="true" overriding="false" path="../BSP-FILES/lpcudk_14K50.h">
+      <item path="../BSP-FILES/lpcudk_14K50.h" ex="true" overriding="false">
         <HI-TECH-COMP>
         </HI-TECH-COMP>
         <HI-TECH-LINK>
@@ -1572,7 +1599,7 @@
         <XC8-config-global>
         </XC8-config-global>
       </item>
-      <item ex="true" overriding="false" path="../BSP-FILES/pdfusb_4550.c">
+      <item path="../BSP-FILES/pdfusb_4550.c" ex="true" overriding="false">
         <HI-TECH-COMP>
         </HI-TECH-COMP>
         <HI-TECH-LINK>
@@ -1580,7 +1607,7 @@
         <XC8-config-global>
         </XC8-config-global>
       </item>
-      <item ex="true" overriding="false" path="../BSP-FILES/pdusb_27J53.c">
+      <item path="../BSP-FILES/pdusb_27J53.c" ex="true" overriding="false">
         <HI-TECH-COMP>
         </HI-TECH-COMP>
         <HI-TECH-LINK>
@@ -1588,7 +1615,7 @@
         <XC8-config-global>
         </XC8-config-global>
       </item>
-      <item ex="true" overriding="false" path="../BSP-FILES/pdusb_27J53.h">
+      <item path="../BSP-FILES/pdusb_27J53.h" ex="true" overriding="false">
         <HI-TECH-COMP>
         </HI-TECH-COMP>
         <HI-TECH-LINK>
@@ -1596,7 +1623,7 @@
         <XC8-config-global>
         </XC8-config-global>
       </item>
-      <item ex="true" overriding="false" path="../BSP-FILES/pdusb_4550.h">
+      <item path="../BSP-FILES/pdusb_4550.h" ex="true" overriding="false">
         <HI-TECH-COMP>
         </HI-TECH-COMP>
         <HI-TECH-LINK>
@@ -1607,7 +1634,8 @@
       <HI-TECH-COMP>
         <property key="asmlist" value="true"/>
         <property key="define-macros" value=""/>
-        <property key="extra-include-directories" value="./;../mla/v2014_07_22/framework"/>
+        <property key="extra-include-directories"
+                  value="./;../mla/v2014_07_22/framework"/>
         <property key="identifier-length" value="255"/>
         <property key="operation-mode" value="free"/>
         <property key="opt-xc8-compiler-strict_ansi" value="false"/>
@@ -1670,11 +1698,10 @@
       </HI-TECH-LINK>
       <PICkit3PlatformTool>
         <property key="AutoSelectMemRanges" value="auto"/>
-        <property key="Freeze Peripherals" value="true"/>
         <property key="SecureSegment.SegmentProgramming" value="FullChipProgramming"/>
-        <property key="ToolFirmwareFilePath" value="Press to browse for a specific firmware version"/>
+        <property key="ToolFirmwareFilePath"
+                  value="Press to browse for a specific firmware version"/>
         <property key="ToolFirmwareOption.UseLatestFirmware" value="true"/>
-        <property key="firmware.download.all" value="false"/>
         <property key="hwtoolclock.frcindebug" value="false"/>
         <property key="memories.aux" value="false"/>
         <property key="memories.bootflash" value="true"/>
@@ -1687,8 +1714,10 @@
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.end" value="0x3fff"/>
         <property key="memories.programmemory.partition2" value="true"/>
-        <property key="memories.programmemory.partition2.end" value="${memories.programmemory.partition2.end.value}"/>
-        <property key="memories.programmemory.partition2.start" value="${memories.programmemory.partition2.start.value}"/>
+        <property key="memories.programmemory.partition2.end"
+                  value="${memories.programmemory.partition2.end.value}"/>
+        <property key="memories.programmemory.partition2.start"
+                  value="${memories.programmemory.partition2.start.value}"/>
         <property key="memories.programmemory.start" value="0x0"/>
         <property key="poweroptions.powerenable" value="true"/>
         <property key="programmertogo.imagename" value=""/>
