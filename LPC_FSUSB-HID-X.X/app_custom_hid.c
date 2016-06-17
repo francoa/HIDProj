@@ -28,13 +28,17 @@
 #include <usb/usb_device_hid.h>
 #include "system.h"
 #include "app_custom_hid.h"
-
+#include <xc.h>
 
 struct {
     unsigned IN_TODO :1;
     unsigned OUT_TODO :1;
     unsigned free :6;
 }Flags;
+
+#ifndef _XTAL_FREQ
+    #define _XTAL_FREQ 20000000
+#endif
 
 /* Some processors have a limited range of RAM addresses where the USB module
  * is able to access.  The following section is for those devices.  This section
@@ -81,7 +85,7 @@ void APP_cmd(void);
   const char strMisc[]      = "HS-Ulm";
   
 /** VARIABLES ******************************************************/
-
+BYTE INPacket[2];
 
 
 /*********************************************************************
@@ -129,6 +133,9 @@ void APP_CustomHIDInitialize()
 ********************************************************************/
 void APP_CustomHIDTasks()
 {
+    mLED_1_Toggle();
+    __delay_ms(5);
+    
     if(!HIDRxHandleBusy(USBOutHandle))
         APP_usbOUT(); // Data USB(pc) -> PIC
 
