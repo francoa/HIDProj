@@ -9,6 +9,7 @@
 
 //------------------------------------------- P U B L I C    P R O T O T Y P E S
 void APP_CustomHIDInitialize(void);     // legacy
+void another(void);
 void APP_CustomHIDTasks(void);          // legacy ProcessIO()
 
 void APP_USBCBSuspend(void);            // empty ;-)

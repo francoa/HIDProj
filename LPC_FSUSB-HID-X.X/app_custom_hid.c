@@ -80,7 +80,8 @@ void APP_cmd(void);
   
 /** VARIABLES ******************************************************/
 BYTE INPacket[2];
- unsigned char Txdata[] = "HOLA";
+unsigned char Txdata[] = "HOLA";
+int adc;
 
 /*********************************************************************
 * Function:     void APP_CustomHIDInitialize(void);
@@ -125,17 +126,28 @@ void APP_CustomHIDInitialize()
 * Output: None
 *
 ********************************************************************/
+void another()
+{
+    while(BusyUSART());  
+    while(!TRMT);
+    putsUSART((char*)Txdata);
+    adc = ReadADC();
+    ConvertADC();
+    mLED_1_On();
+    __delay_ms(5);
+    mLED_1_Off();
+}
 void APP_CustomHIDTasks()
 {
 #ifdef DBG
     while(!TRMT);
-    TXREG = 'H';
-    //WriteUSART('H');
-    //putsUSART((char *)Txdata);
-#endif
+        putsUSART((char*)Txdata);
+    adc = ReadADC();
+    ConvertADC();
     mLED_1_On();
     __delay_ms(5);
     mLED_1_Off();
+#endif
     
     if(!HIDRxHandleBusy(USBOutHandle))
         APP_usbOUT(); // Data USB(pc) -> PIC

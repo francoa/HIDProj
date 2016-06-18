@@ -28,6 +28,9 @@
 #include <usb/usb_device_hid.h>
 #include "app_custom_hid.h"
 
+#ifdef DBG
+    #include "dbgFunctions.h"
+#endif
 
 /** DECLARATIONS ***************************************************/
 
@@ -51,15 +54,21 @@ MAIN_RETURN main(void)
 {   
     SYSTEM_Initialize(SYSTEM_STATE_USB_START);
 
+    #ifdef DBG
+      USARTstart(9600);
+      WriteUSART('H');
+      ADCstart();
+    #endif
+
+    while(1){
+        another();
+    }  
+      
     USBDeviceInit();            //usb_device.c
     #if defined(USB_INTERRUPT)
       USBDeviceAttach();        //usb_device.c
     #endif
-
-    #ifdef DBG
-      USARTstart(9600);
-    #endif
-
+      
     while(1)
     {
         SYSTEM_Tasks();

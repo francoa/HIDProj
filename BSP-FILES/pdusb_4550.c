@@ -23,14 +23,14 @@
 #include "system.h"
 //#include <USB/usb.h>
 //#include <USB/usb_device_hid.h>
-//#include <adc.h>
+#include <adc.h>
 
 /** CONFIGURATION **************************************************/
         #pragma config PLLDIV   = 5         // (20 MHz crystal on PICDEM FS USB board)
                                             // USB a 6MHz -> low speed, 48MHz -> high speed
         #pragma config CPUDIV   = OSC1_PLL2
         #pragma config USBDIV   = 2         // Clock source from -> 96MHz PLL/2
-        #pragma config FOSC     = HSPLL_HS
+        #pragma config FOSC     = HS
         #pragma config FCMEN    = OFF
         #pragma config IESO     = OFF
         #pragma config PWRT     = OFF

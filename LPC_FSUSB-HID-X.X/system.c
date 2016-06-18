@@ -82,7 +82,7 @@ void SYSTEM_Initialize( SYSTEM_STATE state )
             mInitAllLEDs();
             mInitSwitch();
             mInitPoti();
-            initADC();
+            //initADC();
             initSpecialEventTrigger();
             break;
 

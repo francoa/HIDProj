@@ -8,11 +8,9 @@
 #ifndef DBGFUNCTIONS_H
 #define	DBGFUNCTIONS_H
 
-#include <plib.h>
-
-#ifndef _XTAL_FREQ
-    #define _XTAL_FREQ 20000000
-#endif
+#include <usart.h>
+#include "system.h"
+#include <adc.h>
 
 #ifdef	__cplusplus
 extern "C" {
@@ -21,6 +19,8 @@ extern "C" {
     void USARTstart(int baudrate);
     unsigned char config, spbrg, baudconfig;
     unsigned int sp;
+    
+    void ADCstart();
 
 #ifdef	__cplusplus
 }
