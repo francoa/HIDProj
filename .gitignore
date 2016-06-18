@@ -1,6 +1,7 @@
 build
 dist
 debug
+documents
 LPC_FSUSB-HID-X.X/nbproject/private
 LPC_FSUSB-HID-X.X/nbproject/*.mk
 LPC_FSUSB-HID-X.X/nbproject/*.bash
