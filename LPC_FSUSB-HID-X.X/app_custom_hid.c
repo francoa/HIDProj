@@ -98,6 +98,9 @@ int adc;
 ********************************************************************/
 void APP_CustomHIDInitialize()
 {
+    while(!TRMT);
+    WriteUSART('I');
+    
     //initialize the variable holding the handle for the last
     // transmission
     USBInHandle = 0;
@@ -126,28 +129,19 @@ void APP_CustomHIDInitialize()
 * Output: None
 *
 ********************************************************************/
-void another()
-{
-    while(BusyUSART());  
-    while(!TRMT);
-    putsUSART((char*)Txdata);
-    adc = ReadADC();
-    ConvertADC();
-    mLED_1_On();
-    __delay_ms(5);
-    mLED_1_Off();
-}
 void APP_CustomHIDTasks()
 {
 #ifdef DBG
-    while(!TRMT);
-        putsUSART((char*)Txdata);
-    adc = ReadADC();
-    ConvertADC();
-    mLED_1_On();
-    __delay_ms(5);
-    mLED_1_Off();
+    //while(!TRMT);
+    //    putsUSART((char*)Txdata);
+    //adc = ReadADC();
+    //ConvertADC();
+    //mLED_1_On();
+    //__delay_ms(5);
+    //mLED_1_Off();
 #endif
+    while(!TRMT);
+    WriteUSART('U');
     
     if(!HIDRxHandleBusy(USBOutHandle))
         APP_usbOUT(); // Data USB(pc) -> PIC
@@ -173,9 +167,9 @@ void APP_CustomHIDTasks()
  * Note:            None
  ******************************************************************************/
 void APP_usbIN(void) {
-
-    mLED_2_Toggle();
-    __delay_ms(5);
+    
+    while(!TRMT);
+    WriteUSART('1');
     
     //Write the new data that we wish to send to the host to the INPacket[] array
     INPacket[0] = 0b11110000;
@@ -204,9 +198,8 @@ void APP_usbIN(void) {
  ******************************************************************************/
 
 void APP_usbOUT(void) {
-
-    mLED_3_Toggle();
-    __delay_ms(5);
+    while(!TRMT);
+    WriteUSART('0');
     
     APP_cmd();
 

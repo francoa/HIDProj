@@ -17,7 +17,6 @@ extern "C" {
 #endif
 
     void USARTstart(int baudrate);
-    unsigned char config, spbrg, baudconfig;
     unsigned int sp;
     
     void ADCstart();

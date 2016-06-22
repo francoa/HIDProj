@@ -56,13 +56,8 @@ MAIN_RETURN main(void)
 
     #ifdef DBG
       USARTstart(9600);
-      WriteUSART('H');
       ADCstart();
     #endif
-
-    while(1){
-        another();
-    }  
       
     USBDeviceInit();            //usb_device.c
     #if defined(USB_INTERRUPT)
@@ -138,19 +133,27 @@ bool USER_USB_CALLBACK_EVENT_HANDLER(USB_EVENT event, void *pdata, uint16_t size
     {
         case EVENT_TRANSFER:
             //Add application specific callback task or callback function here if desired.
+            while(!TRMT);
+            WriteUSART('T');
             break;
         case EVENT_SOF:
+            while(!TRMT);
+            WriteUSART('S');
             APP_USBCB_SOF_Handler();
             /* We are using the SOF as a timer to time the LED indicator.  Call
              * the LED update function here. */
 //new MLA           APP_LEDUpdateUSBStatus();
             break;
         case EVENT_SUSPEND:
+            while(!TRMT);
+            WriteUSART('D');
             APP_USBCBSuspend();
             /* Update the LED status for the suspend event. */
 //new MLA            APP_LEDUpdateUSBStatus();
             break;
         case EVENT_RESUME:
+            while(!TRMT);
+            WriteUSART('R');
             APP_USBCBWakeFromSuspend();
             /* Update the LED status for the resume event. */
 //new MLA            APP_LEDUpdateUSBStatus();
@@ -159,21 +162,31 @@ bool USER_USB_CALLBACK_EVENT_HANDLER(USB_EVENT event, void *pdata, uint16_t size
             /* When the device is configured, we can (re)initialize the demo
              * code. */
 //old MLA            USBCBInitEP();
+            while(!TRMT);
+            WriteUSART('C');
             APP_CustomHIDInitialize();
             break;
         case EVENT_SET_DESCRIPTOR:
+            while(!TRMT);
+            WriteUSART('O');
 //            APP_USBCBStdSetDscHandler();
             break;
         case EVENT_EP0_REQUEST:
+            while(!TRMT);
+            WriteUSART('Q');
             /* We have received a non-standard USB request.  The HID driver
              * needs to check to see if the request was for it. */
 //            APP_USBCBCheckOtherReq();
             USBCheckHIDRequest();
             break;
         case EVENT_BUS_ERROR:
+            while(!TRMT);
+            WriteUSART('E');
             APP_USBCBErrorHandler();
             break;
         case EVENT_TRANSFER_TERMINATED:
+            while(!TRMT);
+            WriteUSART('-');
             //Add application specific callback task or callback function here if desired.
             //The EVENT_TRANSFER_TERMINATED event occurs when the host performs a CLEAR
             //FEATURE (endpoint halt) request on an application endpoint which was

@@ -1,42 +1,47 @@
 #include "dbgFunctions.h"
 
 void USARTstart(int baudrate){                 
-    //CloseUSART(); //turn off usart if was previously on                 
-    //RCSTA = RCSTA | 0b10000000;
-    TRISCbits.RC6 = 1;
-    TRISCbits.RC7 = 1;
     
-    //-----configure USART -----               
-    config = USART_TX_INT_OFF & USART_RX_INT_OFF & USART_ASYNCH_MODE & USART_EIGHT_BIT
-            & USART_BRGH_LOW;                 
-
-    //-----SPBRG needs to be changed depending upon oscillator frequency-------                     
-    spbrg = 31; // At 20Mhz of oscillator frequency & baud rate of 9600, low speed.                 
-
-    OpenUSART(config, spbrg);     
+    //EUSART Asynchronous Mode
+    /*Initialize the SPBRGH:SPBRG registers for the
+    appropriate baud rate. Set or clear the BRGH
+    and BRG16 bits, as required, to achieve the
+    desired baud rate.*/
+    TXSTAbits.BRGH = 1;     //TXSTA<2>
+    BAUDCONbits.BRG16 = 1;  //BAUDCON<3>
+    BAUDCONbits.ABDEN = 0;  //BAUDCON<0> No Auto-Baud Detect
+    BAUDCONbits.WUE = 0;    //BAUDCON<1> Wake-up disabled
+    sp = (_XTAL_FREQ/baudrate)/4 - 1;       
+    SPBRGH = sp >> 8;
+    SPBRG = (sp << 8) >> 8;
     
-    baudconfig = BAUD_8_BIT_RATE & BAUD_AUTO_ON;                 
-    baudUSART(baudconfig);                 
-
-    while (BusyUSART())                 
-        ;  
+    /*Enable the asynchronous serial port by clearing
+    bit SYNC and setting bit SPEN.*/
+    TXSTAbits.SYNC = 0;     //TXSTA<4>
+    RCSTAbits.SPEN = 1;     //RCSTA<7>
     
-  /*sp = (_XTAL_FREQ - baudrate*64)/(baudrate*64);   //SPBRG for Low Baud Rate
-  if(sp>255)                                       //If High Baud Rage Required
-  {
-    sp = (_XTAL_FREQ - baudrate*16)/(baudrate*16); //SPBRG for High Baud Rate
-    BRGH = 1;                                     //Setting High Baud Rate
-  }
-  if(sp<256)
-  {
-    SPBRG = sp;                                    //Writing SPBRG Register
-    SYNC = 0;                                     //Setting Asynchronous Mode, ie UART
-    SPEN = 1;                                     //Enables Serial Port
-    TRISC7 = 1;                                   //As Prescribed in Datasheet
-    TRISC6 = 1;                                   //As Prescribed in Datasheet
-    CREN = 1;                                     //Enables Continuous Reception
-    TXEN = 1;                                     //Enables Transmission
-  }*/
+    /*If the signal from the TX/RX pin is to be inverted, set
+    the TXCKP/RXDTP bit.*/
+    BAUDCON = BAUDCON & 0b11001111;     //BAUDCON<4,5>
+    
+    /*If interrupts are desired, set enable bit TXIE/RCIE.*/
+    //PIE1bits.RCIE = 1;
+    
+    /*If 9-bit transmission/reception is desired, set bit
+    TX9/RX9. Can be used as address/data bit.*/
+    TXSTAbits.TX9 = 0;      //TXSTA<6>
+    RCSTAbits.RX9 = 0;      //RCSTA<6>
+    
+    /*Enable the transmission/reception by setting bit TXEN/CREN*/
+    TXSTAbits.TXEN = 1;     //TXSTA<5>
+    RCSTAbits.CREN = 1;     //RCSTA<4>
+    
+    /*If using interrupts, ensure that the GIE and PEIE
+    bits in the INTCON register (INTCON<7:6>) are
+    set.*/      
+           
+    
+    
 }
 
 void ADCstart(){
